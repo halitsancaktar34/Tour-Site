@@ -1,0 +1,25 @@
+.navbar{
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 30px 20px;
+    .navbar-logo{
+        font-size: 40px;
+        margin-left: 50px;
+    }
+    &-links{
+        display: flex;
+        align-items: center;
+        li{
+            margin-right: 100px;
+            a{
+                font-size: 25px;
+                font-weight: 700;
+            }
+        }
+    }
+}

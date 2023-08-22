@@ -1,0 +1,141 @@
+@import "_navbar";
+@import "_header";
+@import "_events";
+@import "_explore";
+@import "_tours";
+@import "_footer";
+
+:root {
+    --primary-color: #fc036b;
+    --secondary-color: #484872;
+    --thirdy-color: #49497e;
+    --text-color: #FBFFDC;
+    --transition: all 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    text-transform: capitalize;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    background-color: #EBD8B2;
+}
+
+section {
+    width: 80%;
+    margin: 80px auto;
+}
+a{
+    color: var(--text-color);
+    font-size: 1.2rem;
+}
+h4 {
+    font-size: 3vmin;
+    color: var(--text-color);
+    margin: 25px auto;
+}
+h1,h2,h3,h4,h5 {
+    color: var(--text-color);
+}
+p {
+    color: black;
+    padding: 0px 40px;
+}
+
+.line {
+    width: 250px;
+    height: 4px;
+    background-color: var(--primary-color);
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+.button {
+    padding: 10px 15px;
+    background-color: #A4907C;
+    border-radius: 30px;
+    color: var(--text-color);
+
+    &:hover {
+        background-color: var(--text-color);
+        color: #A4907C;
+        transition: var(--transition);
+    }
+}
+
+.events-row,
+.tours-row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.navbar-menu-btn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+@media only screen and (max-width:940px) {
+    .navbar {
+        padding: 0;
+
+        &-logo {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            color: var(--text-color);
+        }
+
+        &-links {
+            background-color: #A4907C;
+            width: 100%;
+            flex-direction: column;
+            height: 100vh;
+            justify-content: center;
+            margin-top: -630px;
+        }
+
+        li {
+            margin: 30px auto;
+        }
+
+        &-menu-btn {
+            display: block;
+        }
+
+    }
+
+    .mobile-menu {
+        margin-top: 0;
+        border-bottom-right-radius: 30%;
+        transition: all 0.7s ease;
+    }
+}
+
+@media (max-width:1800px) {
+
+    .events-row,
+    .tours-row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+        gap: 5rem;
+    }
+    .events-row-col img {
+        width: 550px;
+        height: 400px;
+    }
+}
