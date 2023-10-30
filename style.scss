@@ -84,16 +84,16 @@ p {
     right: 30px;
     cursor: pointer;
     display: none;
+    width: 40px;
 }
 
-@media only screen and (max-width:940px) {
+@media (max-width:940px) {
     .navbar {
         padding: 0;
-
         &-logo {
             position: absolute;
-            top: 30px;
-            left: 30px;
+            top: 15px;
+            left: 45px;
             color: var(--text-color);
         }
 
@@ -112,14 +112,18 @@ p {
 
         &-menu-btn {
             display: block;
+            
         }
-
     }
 
     .mobile-menu {
         margin-top: 0;
         border-bottom-right-radius: 30%;
         transition: all 0.7s ease;
+    }
+    .explore-content .line {
+        width: 180px;
+        margin-bottom: 50px;
     }
 }
 
